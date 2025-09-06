@@ -1,0 +1,251 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Login
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #5ad1cb 0%, #7a6de8 50%, #e94cf7 100%);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .bg-shape1, .bg-shape2 {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      object-fit: cover;
+      opacity: 0.2;
+      pointer-events: none;
+      user-select: none;
+    }
+    .bg-shape1 {
+      top: 0;
+      left: 0;
+      clip-path: polygon(0 0, 40% 0, 0 40%);
+    }
+    .bg-shape2 {
+      bottom: 0;
+      right: 0;
+      clip-path: polygon(100% 100%, 60% 100%, 100% 60%);
+    }
+    form {
+      background: white;
+      border-radius: 0.375rem;
+      width: 100%;
+      max-width: 384px;
+      padding: 2rem;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #111827;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    label {
+      display: block;
+      font-size: 0.625rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 0.25rem;
+    }
+    .input-wrapper {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    .input-wrapper:last-of-type {
+      margin-bottom: 0.5rem;
+    }
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #d1d5db;
+      padding: 0.5rem 0 0.5rem 2.25rem;
+      font-size: 0.875rem;
+      color: #9ca3af;
+      outline: none;
+      box-sizing: border-box;
+    }
+    input::placeholder {
+      color: #9ca3af;
+    }
+    input:focus {
+      border-color: #6366f1;
+      color: #111827;
+    }
+    .input-icon {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9ca3af;
+      font-size: 1rem;
+      pointer-events: none;
+    }
+    .forgot-password {
+      text-align: right;
+      font-size: 0.75rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .forgot-password:hover {
+      color: #111827;
+    }
+    button {
+      width: 100%;
+      padding: 0.5rem 0;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: white;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(to right, #5ad1cb, #e94cf7);
+      transition: background 0.3s ease;
+      text-transform: uppercase;
+    }
+    button:hover {
+      background: linear-gradient(to right, #4ac0bb, #d43de9);
+    }
+    .or-text {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #4b5563;
+      margin: 2rem 0 1rem;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .social-icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.125rem;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+    .social-icon.facebook {
+      background-color: #3b5998;
+    }
+    .social-icon.facebook:hover {
+      background-color: #2d4373;
+    }
+    .social-icon.twitter {
+      background-color: #55acee;
+    }
+    .social-icon.twitter:hover {
+      background-color: #2795e9;
+    }
+    .social-icon.google {
+      background-color: #dd4b39;
+    }
+    .social-icon.google:hover {
+      background-color: #c23321;
+    }
+    .signup-text {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #4b5563;
+      margin-bottom: 0.25rem;
+    }
+    .signup-link {
+      display: block;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #111827;
+      text-decoration: none;
+    }
+    .signup-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 400px) {
+      form {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+ </head>
+ <body>
+  <img alt="Large translucent geometric shapes in background" class="bg-shape1" height="600" src="https://storage.googleapis.com/a1aa/image/e8ac0133-7e44-46b6-8a03-57eb20976e2d.jpg" width="600"/>
+  <img alt="Large translucent geometric shapes in background" class="bg-shape2" height="600" src="https://storage.googleapis.com/a1aa/image/e8ac0133-7e44-46b6-8a03-57eb20976e2d.jpg" width="600"/>
+  <form aria-label="Login form">
+   <h1>
+    Login
+   </h1>
+   <label for="username">
+    Username
+   </label>
+   <div class="input-wrapper">
+    <span aria-hidden="true" class="input-icon">
+     <i class="fas fa-user">
+     </i>
+    </span>
+    <input id="username" placeholder="Type your username" type="text"/>
+   </div>
+   <label for="password">
+    Password
+   </label>
+   <div class="input-wrapper">
+    <span aria-hidden="true" class="input-icon">
+     <i class="fas fa-lock">
+     </i>
+    </span>
+    <input id="password" placeholder="Type your password" type="password"/>
+   </div>
+   <a class="forgot-password" href="#">
+    Forgot password?
+   </a>
+   <button type="submit">
+    LOGIN
+   </button>
+   <p class="or-text">
+    Or Sign Up Using
+   </p>
+   <div class="social-icons">
+    <a aria-label="Sign up with Facebook" class="social-icon facebook" href="#">
+     <i class="fab fa-facebook-f">
+     </i>
+    </a>
+    <a aria-label="Sign up with Twitter" class="social-icon twitter" href="#">
+     <i class="fab fa-twitter">
+     </i>
+    </a>
+    <a aria-label="Sign up with Google" class="social-icon google" href="#">
+     <i class="fab fa-google">
+     </i>
+    </a>
+   </div>
+   <p class="signup-text">
+    Or Sign Up Using
+   </p>
+   <a class="signup-link" href="#">
+    SIGN UP
+   </a>
+  </form>
+ </body>
+</html>
